@@ -1,0 +1,42 @@
+<div class="row p-3">
+    <div class="col-12">
+        <!-- Buscador -->
+        
+        <h5>Buscar:</h5>
+
+    <input type="text" 
+       class="form-control" 
+       placeholder="Buscador de imagenes..."
+       #searchInput
+       (keyup.enter)="search()"
+    >
+        
+    </div>
+
+    <div class="col-12 pt-2">
+        <!-- Galeria de imágenes -->
+        
+       
+<div class="row">
+    <div *ngFor="let starWars of infoStarWars" class="col-md-3 col-sm-6">
+        <div class="card mb-2 text-center bg-dark">
+
+            <img 
+                [src]="starWars.image" 
+                [alt]="starWars.name"
+                class="card-img-top">
+
+            <div class="card-body text-white">
+                <p class="card-text">
+                    {{starWars.name}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+         
+    </div>
+
+
+    
+</div>
